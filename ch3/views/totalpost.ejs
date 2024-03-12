@@ -1,0 +1,34 @@
+<%- include('./base/header.ejs') %> 
+
+<% 
+if (allpost.length > 0) {
+
+    // <h1> hello welcome</h1>
+    for(var i = 0; i < allpost.length; i++){
+    %>
+    <div class="container my-5 shadow p-3 mb-5 bg-body-tertiary rounded">
+    <div class="row">
+        <div class="col-sm-12 col-xl-6">
+            <img src="" alt="">
+        </div>
+        <div class="col-sm-12 col-xl-6">
+            <div class="container">
+                <h1><%=                    
+allpost[i].title %></h1>
+                <hr>
+            </div>
+            <div class="row">
+                <p><%= 
+allpost[i].description %></p>
+            </div>
+        </div>
+    </div>
+</div>
+    <%
+    }    
+}
+ %>
+
+<%- include('./base/footer.ejs') %>
+
+
